@@ -3,7 +3,7 @@
 #include "./theater/Theater.h"
 #include "./movie/Movie.h"
 #include "./show/Show.h"
-
+#include "./screen/Screen.h"
 
 using namespace std;
 int main(){
@@ -41,6 +41,14 @@ int main(){
         cin>>cs;
         show.confirmShow(cs);
         show.message();
+
+        Screen screen(show.getShowId(),movie.getMovieId(),theater.getTheaterId());
+        screen.showAllScreen();
+        cout<<"Enter number to select screen\n";
+        int sn;
+        cin>>sn;
+        screen.selectScreen(sn);
+        screen.message();
     }
     else if(choice==2){
         user.bookViaTheater();
@@ -67,6 +75,17 @@ int main(){
         cin>>cs;
         show.confirmShow(cs);
         show.message();
+
+        Screen screen(show.getShowId(),movie.getMovieId(),theater.getTheaterId());
+        screen.showAllScreen();
+        cout<<"Enter number to select screen\n";
+        int sn;
+        cin>>sn;
+        screen.selectScreen(sn);
+        screen.message();
+
+
+
     }
 
 
