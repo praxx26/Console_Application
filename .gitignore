@@ -1,0 +1,7 @@
+build/*
+!build/.gitkeep 
+
+src/*
+!src/.gitkeep
+
+*.exe
