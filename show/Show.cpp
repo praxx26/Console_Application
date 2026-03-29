@@ -27,6 +27,9 @@ void Show::confirmShow(int choice){
         this->startTime=6.00;
         this->endTime=9.00;
     }
+    else{
+        throw runtime_error("Invalid selection");
+    }
 }
 
 int Show::getShowId(){

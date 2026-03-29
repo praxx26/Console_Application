@@ -32,6 +32,9 @@ void Theater::selectTheater(int choice){
         this->theaterName="KG";
         this->theaterLocation="Coimbatore";
     }
+    else{
+        throw runtime_error("No Theater Available");
+    }
 }
 
 int Theater::getTheaterId(){

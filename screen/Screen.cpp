@@ -49,7 +49,7 @@ void Screen::selectScreen(int c){
                 this->screenNumber=4;
                 break;
             default:
-                cout<<"Invalid selection\n";
+                throw runtime_error("Invalid selection");
         }
     }
     else if(theaterId==102){
@@ -63,7 +63,7 @@ void Screen::selectScreen(int c){
                 this->screenNumber=2;
                 break;
             default:
-                cout<<"Invalid selection\n";
+                throw runtime_error("Invalid selection");
         }
     }
     else if(theaterId==103){
@@ -81,7 +81,7 @@ void Screen::selectScreen(int c){
                 this->screenNumber=3;
                 break;
             default:
-                cout<<"Invalid selection\n";
+                throw runtime_error("Invalid selection");
         }
     }
     else{
@@ -90,7 +90,7 @@ void Screen::selectScreen(int c){
             this->screenNumber=1;
         }
         else{
-            cout<<"Invalid selection\n";
+            throw runtime_error("Invalid selection");
         }
     }
 }

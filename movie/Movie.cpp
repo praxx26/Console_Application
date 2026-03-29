@@ -23,11 +23,14 @@ void Movie::selectMovie(int choice){
         this->duration=167.90;
         this->language="Tamil";
     }
-    if(choice==3){
+    else if(choice==3){
         this->movieName="Leo-2";
         this->movieId=13;
         this->duration=169.90;
         this->language="Tamil";
+    }
+    else{
+        throw runtime_error("Ivalid Selection");   
     }
 }
 int Movie::getMovieId(){
