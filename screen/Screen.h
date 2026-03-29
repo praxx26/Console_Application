@@ -12,7 +12,7 @@ class Screen{
     public:
     Screen(int ShowId,int MovieId,int theaterId);
     void showAllScreen();
-    void selectScreen(int c);
+    bool selectScreen(int c);
     void message();
     int getScreenId();
     int getScreenNumber();

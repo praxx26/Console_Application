@@ -12,11 +12,15 @@ class Seat{
     int screenId;
     int totalSeats;
     vector<vector<char>>seats;
-    
+    int amount=0;
+    vector<pair<int,int>>ss;
+
     public:
     Seat(int theaterId,int showId,int screenId);
     void showSeatLayout();
     void selectSeat();
     void returnSelectedSeats();
     void noOfSeats();
+    bool showPayment();
+    vector<pair<int,int>> returnss();
 };

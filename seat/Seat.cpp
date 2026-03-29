@@ -63,8 +63,33 @@ void Seat::returnSelectedSeats(){
     for(int i=0;i<seats.size();i++){
         for(int j=0;j<seats[0].size();j++){
             if(seats[i][j]=='B'){
+                ss.push_back({i,j});
                 cout<<"Row - "<<i<<" ,Seat No"<<j<<endl;
+                amount+=235;
             }
         }
     }
+}
+
+bool Seat::showPayment(){
+    cout<<"\nTotal Seats : "<<totalSeats<<"\nAmount : "<<amount<<"\n";
+    cout<<"Click Enter to make payment && get the ticket\n";
+    char confirm;
+    cout << "\nProceed to payment? (y/n): ";
+    cin >> confirm;
+
+    if(confirm=='Y' || confirm=='y'){
+        cout<<"Payment Successfull \n";
+        return true;
+    }
+    else{
+        cout<<"Payment Cancelled";
+
+        return false;
+    }
+
+}
+
+vector<pair<int,int>> Seat::returnss(){
+    return ss;
 }

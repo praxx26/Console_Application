@@ -10,7 +10,7 @@ void Movie::showAllMovies(){
     cout<<"3-Leo_2\n";
 }
 
-void Movie::selectMovie(int choice){
+bool Movie::selectMovie(int choice){
     if(choice==1){
         this->movieName="Leo";
         this->movieId=11;
@@ -30,8 +30,9 @@ void Movie::selectMovie(int choice){
         this->language="Tamil";
     }
     else{
-        throw runtime_error("Ivalid Selection");   
+        return false;
     }
+    return true;
 }
 int Movie::getMovieId(){
     return movieId;

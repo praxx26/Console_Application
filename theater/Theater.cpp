@@ -11,7 +11,7 @@ void Theater::showAllTheaters(){
     cout<<"4 - KG\n";
 }
 
-void Theater::selectTheater(int choice){
+bool Theater::selectTheater(int choice){
     if(choice==1){
         this->theaterId=101;
         this->theaterName="PVR";
@@ -33,8 +33,9 @@ void Theater::selectTheater(int choice){
         this->theaterLocation="Coimbatore";
     }
     else{
-        throw runtime_error("No Theater Available");
+        return false;
     }
+    return true;
 }
 
 int Theater::getTheaterId(){

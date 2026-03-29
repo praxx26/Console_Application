@@ -14,8 +14,10 @@ class Show{
     public:
     Show(int theaterId,int movieId);
     void showAvailableShows();
-    void confirmShow(int choice);
+    bool confirmShow(int choice);
     int getShowId();
     void message();
+    float getst();
+    float geted();
 
 };

@@ -29,7 +29,7 @@ void Screen::showAllScreen(){
     }
 }
 
-void Screen::selectScreen(int c){
+bool Screen::selectScreen(int c){
     if(theaterId==101){
         switch(c){
             case 1:
@@ -49,8 +49,9 @@ void Screen::selectScreen(int c){
                 this->screenNumber=4;
                 break;
             default:
-                throw runtime_error("Invalid selection");
+                return false;
         }
+        return true;
     }
     else if(theaterId==102){
         switch(c){
@@ -63,8 +64,9 @@ void Screen::selectScreen(int c){
                 this->screenNumber=2;
                 break;
             default:
-                throw runtime_error("Invalid selection");
+                return false;
         }
+        return true;
     }
     else if(theaterId==103){
         switch(c){
@@ -81,8 +83,9 @@ void Screen::selectScreen(int c){
                 this->screenNumber=3;
                 break;
             default:
-                throw runtime_error("Invalid selection");
+                return false;
         }
+        return true;
     }
     else{
         if(c==1){
@@ -90,8 +93,9 @@ void Screen::selectScreen(int c){
             this->screenNumber=1;
         }
         else{
-            throw runtime_error("Invalid selection");
+            return false;
         }
+        return true;
     }
 }
 

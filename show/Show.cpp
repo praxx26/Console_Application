@@ -11,7 +11,7 @@ void Show::showAvailableShows(){
     cout<<"show3: 6.00 - 9.00\n";
 }
 
-void Show::confirmShow(int choice){
+bool Show::confirmShow(int choice){
     if(choice==1){
         this->showId=1;
         this->startTime=10.00;
@@ -28,8 +28,9 @@ void Show::confirmShow(int choice){
         this->endTime=9.00;
     }
     else{
-        throw runtime_error("Invalid selection");
+        return false;
     }
+    return true;
 }
 
 int Show::getShowId(){
@@ -38,4 +39,11 @@ int Show::getShowId(){
 
 void Show::message(){
     cout<<"Show - Timing : "<<startTime<<" to "<<endTime<<"\n";
+}
+
+float Show::getst(){
+    return startTime;
+}
+float Show::geted(){
+    return endTime;
 }

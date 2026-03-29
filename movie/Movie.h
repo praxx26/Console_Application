@@ -12,7 +12,7 @@ class Movie{
     public:
     Movie(int userId);
     void showAllMovies();
-    void selectMovie(int choice);
+    bool selectMovie(int choice);
     int getMovieId();
     string getMovieName();
 };
